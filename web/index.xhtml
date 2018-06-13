@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Iniciar Sesión</title>
+    </h:head>
+    <h:body style="background: #add">
+        <b:container >
+            
+            <b:form style="margin-top: 15%">
+                <center><h1>Iniciar Sesión</h1></center>
+                <b:row>
+                    <b:column col-md="4" offset-md="4">
+                        <b:inputText placeholder="Cuenta" value="#{loginBean.usuario}">
+                            <f:facet name="prepend">
+                                <b:iconAwesome name="fa-user"/>
+                            </f:facet>
+                        </b:inputText>
+                    </b:column>
+                </b:row>
+                <b:row>
+                    <b:column col-md="4" offset-md="4">
+                        <b:inputText placeholder="Contraseña" value="#{loginBean.contraseña}" type="password">
+                            <f:facet name="prepend">
+                                <b:iconAwesome name="fa-key"/>
+                            </f:facet>
+                        </b:inputText>
+                    </b:column>
+                </b:row>
+                <b:row>
+                    <b:column col-md="4" offset-md="4">
+                        <b:commandButton value="Entrar" action="#{loginBean.validacion()}" look="primary" col-md="12" />
+                    </b:column>
+                </b:row>
+            </b:form>
+        </b:container>
+    </h:body>
+</html>
+
